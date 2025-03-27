@@ -1,0 +1,33 @@
+﻿@model PropertyManagement.Models.Expense
+<h2>Expense Type</h2>
+
+<form asp-controller="Expenses" asp-action="CreateExpense" method="post">
+    <label for="ExpenseType">Expense Type</label>
+    <select asp-for="ExpenseType" asp-items="ViewBag.EnumDropdown">
+        <option value="">Select an option</option>
+    </select>
+     <label for="PropertyId">Select Property</label>
+    <select asp-for="PropertyId" asp-items="ViewBag.PropertyDropdown">
+        <option value="">Select a Property</option>
+    </select>
+<div class="mb-3">
+    <label for="Name" class="form-label fw-bold">Name</label>
+    <input asp-for="Name" type="text" class="form-control">
+    <span asp-validation-for="Name" class="text-danger"></span>
+</div>
+<div class="mb-3">
+    <label for="Description" class="form-label fw-bold">Description</label>
+    <input asp-for="Description" type="text" class="form-control">
+    <span asp-validation-for="Description" class="text-danger"></span>
+</div>
+<div class="mb-3">
+    <label for="Cost" class="form-label fw-bold">Cost</label>
+    <input asp-for="Cost" type="text" class="form-control">
+    <span asp-validation-for="Cost" class="text-danger"></span>
+</div>
+<div>
+<h3>Date</h3>
+@Html.EditorFor(m => m.Date, new { htmlAttributes = new { @class = "form-control", type = "date", } })
+</div>
+<input type="submit" value="Create Expense"/>
+</form>

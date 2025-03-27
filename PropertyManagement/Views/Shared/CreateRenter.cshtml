@@ -1,0 +1,29 @@
+﻿@model PropertyManagement.Models.Renter
+<h2>Create Renter</h2>
+<form asp-controller="Renter" asp-action="CreateRenter" method="post">
+     <label for="PropertyId">Select Property</label>
+    <select asp-for="PropertyId" asp-items="ViewBag.PropertyDropdown">
+        <option value="">Select a Property</option>
+    </select>
+    <div class="mb-3">
+    <label for="FirstName" class="form-label fw-bold">First Name</label>
+    <input asp-for="FirstName" type="text" class="form-control">
+    <span asp-validation-for="FirstName" class="text-danger"></span>
+    </div>
+        <div class="mb-3">
+    <label for="LastName" class="form-label fw-bold">Last Name</label>
+    <input asp-for="LastName" type="text" class="form-control">
+    <span asp-validation-for="LastName" class="text-danger"></span>
+    </div>
+        <div class="mb-3">
+    <label for="Phone" class="form-label fw-bold">Phone</label>
+    <input asp-for="Phone" type="text" class="form-control">
+    <span asp-validation-for="Phone" class="text-danger"></span>
+    </div>
+            <div class="mb-3">
+    <label for="Email" class="form-label fw-bold">Email</label>
+    <input asp-for="Email" type="text" class="form-control">
+    <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <input type="submit" value="Create Renter" />
+</form>

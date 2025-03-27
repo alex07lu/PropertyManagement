@@ -1,0 +1,29 @@
+﻿@model Property
+
+@{
+    ViewBag.Title = "Create Property";
+}
+<h2>Create Property</h2>
+<form asp-controller="Property" asp-action="CreateProperty" method="post">
+<div class="mb-3">
+    <label for="AddressLine" class="form-label fw-bold">Address Line<label>
+    <input asp-for="AddressLine" type="text" class="form-control">
+    <span asp-validation-for="AddressLine" class="text-danger"></span>
+</div>
+<div class="mb-3">
+    <label for="City" class="form-label fw-bold">City</label>
+    <input asp-for="City" type="text" class="form-control">
+    <span asp-validation-for="City" class="text-danger"></span>
+</div>
+<div class="mb-3">
+    <label for="State" class="form-label fw-bold">State<label>
+    <input asp-for="State" type="text" class="form-control">
+    <span asp-validation-for="State" class="text-danger"></span>
+</div>
+<div class="mb-3">
+    <label for="PostalCode" class="form-label fw-bold">Postal Code</label>
+    <input asp-for="PostalCode" type="text" class="form-control">
+    <span asp-validation-for="PostalCode" class="text-danger"></span>
+</div>
+    <input type="submit" value="Create Property"/>
+</form>

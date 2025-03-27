@@ -1,0 +1,20 @@
+﻿<h2>Renters</h2> 
+<table class="table"> 
+    <thead> 
+        <tr> 
+            <th>Name</th> 
+            <th>Email</th> 
+            <th></th>
+        </tr>
+    </thead> 
+    <tbody> 
+        @foreach (var item in Model) { 
+            <tr>
+                
+                <td>@item.LastName</td>
+                <td>@item.FirstName</td>
+                <td>@item.Email</td> 
+                <td><a href="./RenterProfile/@item.Id">Profile</a></td>
+            </tr> }
+            </tbody>
+</table>
