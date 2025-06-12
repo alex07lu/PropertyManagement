@@ -1,0 +1,14 @@
+﻿<h2>Property</h2> 
+<table class="table"> 
+    <thead> 
+        <tr> 
+            <th>Address</th> 
+        </tr>
+    </thead> 
+    <tbody> 
+        @foreach (var item in Model) { 
+            <tr>
+                <td><a href="./PropertyProfile/@item.Id">@item.AddressLine</a></td>
+            </tr> }
+            </tbody>
+</table>

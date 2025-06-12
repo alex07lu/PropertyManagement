@@ -1,0 +1,28 @@
+﻿<h2>Expenses</h2> 
+<p>
+    <a asp-action="CreateExpense">Create New</a>
+</p>
+
+<form asp-controller="Expenses" asp-action="ListExpenses" method="get">
+    <p>
+        <label>Title: <input type="text" name="search" /></label>
+        <input type="submit" value="Filter" />
+    </p>
+</form>
+<table class="table"> 
+    <thead> 
+        <tr> 
+            <th>Name</th> 
+            <th>Property</th>
+            <th>Expense Type</th>
+        </tr>
+    </thead> 
+    <tbody> 
+        @foreach (var item in Model) { 
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.GetPropertyNameByPropertyId(@item.PropertyId)</td>
+                <td>@item.ExpenseType</td>
+            </tr> }
+            </tbody>
+</table>

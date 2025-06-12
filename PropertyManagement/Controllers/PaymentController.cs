@@ -8,5 +8,10 @@ namespace PropertyManagement.Controllers
         {
             return View();
         }
+        public IActionResult CreatePayment()
+        {
+            Repository.MyDbContext _context = new Repository.MyDbContext();
+            return View();
+        }
     }
 }

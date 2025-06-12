@@ -2,10 +2,12 @@
 {
     public class Payment
     {
-        public DateTime DueDate { get; set; }
+        public int Id { get; set; }
         public decimal RentDue { get; set; }
+        public decimal Amount { get; set; }
         public string PaymentMethod { get; set; }
         public bool OnTime { get; set; }
-        public DateTime? PaymentDate { get; set; }
+        public DateTime? Date { get; set; }
+        public Renter renter { get; set; }
     }
 }
